@@ -1,0 +1,10 @@
+resilience4j:
+  ratelimiter:
+    configs:
+      default:
+        limitForPeriod: 1
+        limitRefreshPeriod: 5s
+        timeoutDuration: 100ms
+    instances:
+      poke-limit:
+        baseConfig: default
